@@ -1,0 +1,14 @@
+name: Horizon
+version: ${project.version}
+main: me.astelics.horizon.Horizon
+api-version: 1.17
+authors: [ Astelics ]
+description: Core plugin experience
+website: https://twitter.com/ignAstelics
+commands:
+  kill:
+    description: Kill yourself, lose all hp.
+  heal:
+    description: Heal yourself to full hp.
+  fly:
+    description: Enable or disable fly status.
