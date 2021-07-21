@@ -1,16 +1,16 @@
 package me.astelics.horizon;
 
-import me.astelics.horizon.listeners.OnPlayerBlockBreak;
-import me.astelics.horizon.listeners.OnPlayerJoin;
-import me.astelics.horizon.listeners.ShearSheepListener;
-import me.astelics.horizon.listeners.XPBottleBreak;
+import me.astelics.horizon.commands.*;
+import me.astelics.horizon.listeners.*;
+import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.astelics.horizon.commands.*;
+import java.util.ArrayList;
 
 public final class Horizon extends JavaPlugin implements Listener
 {
+    public ArrayList<Player> vanishedPlayers = new ArrayList<>();
 
     @Override
     public void onEnable()
@@ -21,10 +21,13 @@ public final class Horizon extends JavaPlugin implements Listener
         getServer().getPluginManager().registerEvents(new XPBottleBreak(), this);
         getServer().getPluginManager().registerEvents(new ShearSheepListener(), this);
         getServer().getPluginManager().registerEvents(new OnPlayerJoin(), this);
-        getServer().getPluginManager().registerEvents(new OnPlayerBlockBreak(), this);
+        getServer().getPluginManager().registerEvents(new BigMeListener(), this);
+        getServer().getPluginManager().registerEvents(new JoinEvent(this), this);
+        getCommand("incognito").setExecutor(new IncognitoCommand(this));
         getCommand("kill").setExecutor(new KillCommand());
         getCommand("heal").setExecutor(new HealCommand());
         getCommand("fly").setExecutor(new FlyCommand());
+        getCommand("bigme").setExecutor(new BigMeCommand());
     }
 
     @Override
