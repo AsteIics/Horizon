@@ -9,7 +9,7 @@ import sun.jvm.hotspot.ui.ObjectHistogramPanel;
 
 import java.util.ArrayList;
 
-public class JoinEvent implements Listener
+public class IncognitoListener implements Listener
 {
 
     Horizon plugin;
