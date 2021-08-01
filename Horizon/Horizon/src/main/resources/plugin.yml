@@ -1,0 +1,26 @@
+name: Horizon
+version: ${project.version}
+main: me.astelics.horizon.Horizon
+api-version: 1.17
+authors: [ Astelics ]
+description: Core plugin experience
+website: https://twitter.com/ignAstelics
+commands:
+  message:
+    aliases: [ w, msg, t, tell ]
+    description: Message players privately.
+  kill:
+    description: Kill yourself, lose all hp.
+  heal:
+    description: Heal yourself to full hp.
+  fly:
+    description: Enable or disable fly status.
+  bigme:
+    description: Spawn a big you!
+  incognito:
+    aliases: [ vanish ]
+    description: Go invisible!
+  kick:
+    description: Get out!
+  ban:
+    description: Never come back!

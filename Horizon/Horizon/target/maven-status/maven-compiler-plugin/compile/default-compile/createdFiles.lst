@@ -1,0 +1,15 @@
+me\astelics\horizon\Horizon.class
+me\astelics\horizon\commands\punishment\KickCommand.class
+me\astelics\horizon\commands\essentials\FlyCommand.class
+me\astelics\horizon\listeners\OnPlayerJoin.class
+me\astelics\horizon\listeners\ShearSheepListener.class
+me\astelics\horizon\commands\essentials\MessageCommand.class
+me\astelics\horizon\commands\punishment\BanCommand.class
+me\astelics\horizon\listeners\XPBottleBreak.class
+me\astelics\horizon\commands\random\BigMeCommand.class
+me\astelics\horizon\commands\essentials\KillCommand.class
+me\astelics\horizon\utils\BigMeUtils.class
+me\astelics\horizon\listeners\BigMeListener.class
+me\astelics\horizon\commands\staff\IncognitoCommand.class
+me\astelics\horizon\commands\essentials\HealCommand.class
+me\astelics\horizon\listeners\IncognitoListener.class
