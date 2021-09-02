@@ -23,6 +23,7 @@ public class MessageCommand implements CommandExecutor
                     // when calling receiver returns
                     //CraftPlayer{name=astelics}
                     Player receiver = Bukkit.getPlayer(args[0]);
+                    String name = receiver.toString();
                     String message = args[1];
                     String messageSender = "Console";
 
@@ -33,11 +34,11 @@ public class MessageCommand implements CommandExecutor
 
                     if (receiver == null)
                     {
-                        sender.sendMessage(ChatColor.RED + "" + receiver + " is not online right now!");
+                        sender.sendMessage(ChatColor.RED + "" + name + " is not online right now!");
                         return true;
                     } else {
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&',
-                            "&dTo " + receiver + "&7: " + message));
+                            "&dTo " + name + "&7: " + message));
                         receiver.sendMessage(ChatColor.translateAlternateColorCodes('&',
                             "&dFrom " + messageSender + "&7: " + message));
                         return true;
